@@ -26,7 +26,7 @@ sudo apt upgrade -y
 
 # Install and configure various system tools
 
-sudo apt install git ssh tilix
+sudo apt install git ssh tilix -y
 
 ### Configure git
 
