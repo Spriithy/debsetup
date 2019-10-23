@@ -48,7 +48,7 @@ source ~/venv/bin/activate
 read -p "Do you wish to install Python Data Science libraries (y/N)? " answer
 case ${answer:0:1} in
     y|Y )
-        pip install numpy matplotlib pandas dask datashader scikit-learn jupyter-lab
+        pip install numpy matplotlib pandas dask datashader tensorflow scikit-learn jupyter-lab
     ;;
     * ) ;;
 esac
