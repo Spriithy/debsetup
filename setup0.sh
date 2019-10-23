@@ -1,6 +1,6 @@
 # Add user to sudoers
 
-echo "export PATH=$PATH:/usr/sbin/" >> ~/.bashrc
+echo "export PATH=\$PATH:/usr/sbin/" >> ~/.bashrc
 source ~/.bashrc
 cd
 runuser -l root '/usr/sbin/usermod -aG $USER sudo' # sudoer
