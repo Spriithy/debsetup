@@ -36,7 +36,7 @@ echo "[*] Done setting up system."
 # Install and configure various system tools
 
 echo "[*] Installing and configuring system tools..."
-sudo apt install git ssh tilix -y
+sudo apt install git ssh tilix net-tools -y
 
 ## Configure git
 
@@ -66,7 +66,7 @@ source ~/venv/bin/activate
 read -p "[*] Do you wish to install Python Data Science libraries (y/N)? " answer
 case ${answer:0:1} in
 	y|Y )
-		pip install numpy matplotlib pandas dask datashader tensorflow scikit-learn jupyter-lab
+		pip install numpy matplotlib pandas dask datashader tensorflow scikit-learn jupyterlab
 		echo "[*] Done."
 		;;
 	* )
