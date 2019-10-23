@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Setup proxy
 
 read -p "[*] Is your workstation behind a proxy server (y/N)? " answer
@@ -52,11 +54,11 @@ echo "[*] Done installing and configuring system tools."
 echo "[*] Configuring python..."
 sudo apt install python3-pip -y
 
-echo "export PATH=\$PATH:~/.local/bin/" >> ~/.bashrc
-source ~/.bashrc
+echo "export PATH=\$PATH:~/.local/bin/" >> $HOME/.bashrc
+source $HOME/.bashrc
 pip3 install -U virtualenv
-virtualenv venv -p python3 ~/.
-source ~/venv/bin/activate
+virtualenv venv -p python3 $HOME/.
+source $HOME/venv/bin/activate
 
 read -p "[*] Do you wish to install Python Data Science libraries (y/N)? " answer
 case ${answer:0:1} in
@@ -78,14 +80,14 @@ read -p "[*] Do you wish to install Docker (y/N)? " answer
 case ${answer:0:1} in
     y|Y )
         sudo apt remove docker docker-engine docker.io containerd runc
-        sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+        sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
         curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
         sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
         sudo apt update
-        sudo apt install docker-ce docker-ce-cli containerd.io docker-compose
+        sudo apt install docker-ce docker-ce-cli containerd.io docker-compose -y
         sudo usermod -aG $USER docker
         echo "[*] Done."
-        echo "[*] Docker will work properly at your next login."
+        echo "[*] Docker will work properly after you login again."
     ;;
     * )
         echo "[*] Not installing."
