@@ -3,7 +3,7 @@
 read -p "Is your workstation behind a proxy server (y/N)? " answer
 case ${answer:0:1} in
     y|Y )
-        reap -p "Proxy host:" _proxy_host
+        read -p "Proxy host:" _proxy_host
         read -p "Proxy port:" _proxy_port
         read -p "Proxy user:" _proxy_user
         read -p "Proxy password:" _proxy_pass
