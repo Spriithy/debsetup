@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 # Add user to sudoers
 
 echo "export PATH=\$PATH:/usr/sbin/" >> ~/.bashrc
