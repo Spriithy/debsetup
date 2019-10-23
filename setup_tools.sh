@@ -88,7 +88,7 @@ case ${answer:0:1} in
 		sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 		sudo apt update
 		sudo apt install docker-ce docker-ce-cli containerd.io docker-compose -y
-		sudo usermod -aG $USER docker
+		sudo usermod -aG docker $USER
 		echo "[*] Done."
 		echo "[*] Docker will work properly after you login again."
 		;;
