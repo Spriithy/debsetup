@@ -50,7 +50,7 @@ echo "[*] Done installing and configuring system tools."
 # Setup python
 
 echo "[*] Configuring python..."
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 
 echo "export PATH=\$PATH:~/.local/bin/" >> ~/.bashrc
 source ~/.bashrc
