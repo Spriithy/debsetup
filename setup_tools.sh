@@ -36,7 +36,7 @@ echo "[*] Done setting up system."
 # Install and configure various system tools
 
 echo "[*] Installing and configuring system tools..."
-sudo apt install git tig ssh tilix net-tools -y
+sudo apt install git tig ssh terminator net-tools -y
 
 ## Configure git
 
