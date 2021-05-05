@@ -5,7 +5,7 @@
 sudo apt update
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev liblzma-dev -y
 
-pusdh /tmp
+pushd /tmp
 
 PYTHON_VERSION=3.8.10
 
